@@ -1,13 +1,12 @@
 package org.example.veritemecanique;
 
-public class Affirmation {
-    private int id;
+public sealed abstract class Affirmation permits Verite{
+    protected int id;
     private final String statement;
-    private Boolean isTrue;
 
-    public Affirmation(int id, String statement, Boolean isTrue) {
+
+    public Affirmation(int id, String statement) {
         this.id = id;
         this.statement = statement;
-        this.isTrue = isTrue;
     }
 }
